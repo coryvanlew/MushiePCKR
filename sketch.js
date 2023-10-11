@@ -18,9 +18,9 @@ function setup() {
 }
 
 function draw() {
-    background(255); // White background
+    background('#ff91af'); // Pink background
 
-    fill(100); // Gray color
+    fill(255); // White color
     textAlign(CENTER, CENTER);
     textSize(16);
 
@@ -28,11 +28,12 @@ function draw() {
         text(addresses[index], width/2, height/2);
         index = (index + 1) % addresses.length;
     } else {
-        fill(255, 223, 0); // Gold color
+        fill(255); // White color for the winner too
         textSize(20);
         text(winner, width/2, height/2);
     }
 }
+
 
 function mousePressed() {
     if (!isRevealed) {
