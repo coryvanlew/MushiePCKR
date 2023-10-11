@@ -14,7 +14,7 @@ let isRevealed = false;
 
 function setup() {
     createCanvas(800, 600);
-    frameRate(1); // Set framerate to 1 FPS so each address displays for 1 second
+    frameRate(2); // Set framerate to 1 FPS so each address displays for 1 second
 }
 
 function draw() {
