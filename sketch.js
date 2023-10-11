@@ -19,20 +19,28 @@ function setup() {
 
 function draw() {
     background('#ff91af'); // Pink background
+    
+    // Pink fill for the square and a white border
+    fill('#ff91af');
+    stroke(255); // White border
+    strokeWeight(1);
+    rect(50, 250, width - 100, 100); // Adjust the rectangle's position and size as needed
 
-    fill(255); // White color
-    textAlign(CENTER, CENTER);
-    textSize(16);
-
+    // White text color for addresses and blue for the winner
     if (!isRevealed) {
+        fill(255); // White color
+        noStroke(); // No border for text
+        textAlign(CENTER, CENTER);
+        textSize(16);
         text(addresses[index], width/2, height/2);
         index = (index + 1) % addresses.length;
     } else {
-        fill(255); // White color for the winner too
+        fill(0, 0, 255); // Blue color for the winner
         textSize(20);
         text(winner, width/2, height/2);
     }
 }
+
 
 
 function mousePressed() {
