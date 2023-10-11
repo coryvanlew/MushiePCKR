@@ -14,25 +14,24 @@ let isRevealed = false;
 
 function setup() {
     createCanvas(800, 600);
-    frameRate(2); // Set framerate to 1 FPS so each address displays for 1 second
+    frameRate(2); // Set framerate to 2 FPS
 }
 
 function draw() {
     background('#ff91af'); // Pink background
     
-    // Pink fill for the square and a white border
-    fill('#ff91af');
+    // Drawing the square
+    fill('#ff91af'); // Pink fill
     stroke(255); // White border
     strokeWeight(1);
-    rect(50, 250, width - 100, 100); // Adjust the rectangle's position and size as needed
+    rect(50, 250, width - 100, 100); // Rectangle position and size
 
-    // Reset the stroke setting for the text
-    noStroke(); // Remove border/stroke for the text
-    
-    // White text color for addresses and blue for the winner
+    // Drawing the text
+    noStroke(); // Ensure no border/stroke for the text
+    textAlign(CENTER, CENTER);
+
     if (!isRevealed) {
-        fill(255); // White color
-        textAlign(CENTER, CENTER);
+        fill(255); // White color for text
         textSize(16);
         text(addresses[index], width/2, height/2);
         index = (index + 1) % addresses.length;
@@ -49,4 +48,3 @@ function mousePressed() {
         isRevealed = true;
     }
 }
-
