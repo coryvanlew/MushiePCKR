@@ -14,7 +14,7 @@ let isRevealed = false;
 
 function setup() {
     createCanvas(800, 600);
-    frameRate(2); // Set framerate to 2 FPS
+    frameRate(8); // Set framerate to 2 FPS
 }
 
 function draw() {
