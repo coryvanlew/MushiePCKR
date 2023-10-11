@@ -26,10 +26,12 @@ function draw() {
     strokeWeight(1);
     rect(50, 250, width - 100, 100); // Adjust the rectangle's position and size as needed
 
+    // Reset the stroke setting for the text
+    noStroke(); // Remove border/stroke for the text
+    
     // White text color for addresses and blue for the winner
     if (!isRevealed) {
         fill(255); // White color
-        noStroke(); // No border for text
         textAlign(CENTER, CENTER);
         textSize(16);
         text(addresses[index], width/2, height/2);
@@ -40,8 +42,6 @@ function draw() {
         text(winner, width/2, height/2);
     }
 }
-
-
 
 function mousePressed() {
     if (!isRevealed) {
